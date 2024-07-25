@@ -1,0 +1,13 @@
+{
+    "default":
+    [
+        "Hidrógeno",
+        "Helio",
+        "Litio",
+        "Berilio",
+        "Boro",
+        "Carbono",
+        "Otro",
+        "Mas"
+    ]
+}

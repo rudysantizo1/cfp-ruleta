@@ -1,0 +1,69 @@
+.contenedor-ruleta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 30rem;
+    height: 30rem;
+  }
+  
+  .contenedor-ruleta::before {
+    content: "";
+    width: 4rem;
+    height: 4rem;
+    background-color: white;
+    position: absolute;
+    z-index: 1;
+    margin-top: -3rem;
+    transform: rotate(45deg);
+    pointer-events: none;
+  }
+  
+  .ruleta {
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    animation-timing-function: cubic-bezier(0, 0.4, 0.4, 1.04);
+    animation-duration: 5.8s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+  }
+  
+   .ruleta::before {
+    content: "";
+    width: 25%;
+    height: 25%;
+    background-color: #fff;
+    position: absolute;
+    z-index: 2;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  } 
+  
+  .opcion {
+    border: 0 solid transparent;
+    position: absolute;
+    transform-origin: top center;
+    top: 50%;
+  }
+  
+  /* Estilos para el texto en cada opción */
+  .opcion::before {
+    z-index: 3;
+    position: absolute;
+    display: block;
+    text-align: center;
+    font-size: 25px; /* Aumenta el tamaño del texto */
+    color: #fff;
+    font-weight: bold;
+    font-family: sans-serif;
+    width: 60px; /* Aumenta el ancho del contenedor de texto */
+    line-height: 60px; /* Aumenta la altura de línea */
+    left: -30px; /* Ajusta la posición horizontal */
+    margin-top: 5rem; /* Ajusta el margen superior */
+    transform: rotate(90deg);
+  }
+  
