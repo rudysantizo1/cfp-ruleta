@@ -61,7 +61,7 @@ const Ruleta: React.FC<RuletaProps> = ({ elementos, ganador, girarRuleta }) => {
         }
         @keyframes number-${indice} {
           from { transform: rotate(0); }
-          to { transform: rotate(${400 * 5 - anguloCasillas * indice}deg); }
+          to { transform: rotate(${396 * 5 - anguloCasillas * indice}deg); }
         }
       `;
       document.head.appendChild(style);
