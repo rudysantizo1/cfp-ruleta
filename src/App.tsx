@@ -27,7 +27,22 @@ function App() {
     if ((elements as Elementos)) {
       setElementos((elements as Elementos).default);
     }
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if(event.key === 'Enter'){
+        girarRuleta()
+      }
+    };
+
+    console.log(window)
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+
   }, []);
+
 
   return (
     <div className="App">
